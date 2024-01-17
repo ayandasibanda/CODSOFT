@@ -36,7 +36,7 @@ class RandomNumber {
 
     // Close the scanner to prevent resource leaks
         myObj.close();
-    System.out.println("Please enter random a number: ")
+    System.out.println("Please enter random a number: ");
 
     }
 }
