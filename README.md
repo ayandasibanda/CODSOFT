@@ -1,4 +1,4 @@
-# **This repository contains all the tasks given to me at Codsoft.**
+## This repository contains all the tasks given to me at Codsoft.
 
 [**Task 1: Number Game**](https://github.com/ayandasibanda/CODSOFT/blob/main/Task1.java)
 
@@ -24,6 +24,7 @@ display the results, show the total marks, average percentage and the correspond
 to the user.
 
 [**Task 3: ATM Interface**](https://github.com/ayandasibanda/CODSOFT/blob/main/Task3.java)
+
 I created a class to represent the ATM. I designed the user interface for the ATM Machine and
 included options such as withdrawing, depositing and checking the balance. I implemented methods
 for each option, such as withdraw(amount), deposit(amount) and checkBalance().
@@ -34,6 +35,7 @@ appropriate messages to the user based on their chosen options and the success o
 transactions
 
 [**Task 4: Currency Converter**](https://github.com/ayandasibanda/CODSOFT/blob/main/Task4.java)
+
 In this task, my application allows the user to choose the base currency and the target currency.
 It fetches real-time exchange rates from a reliable API (Yahoo API). It takes the input from the user
 for the amount they want to convert. It the converts the input amount from the base currency to the target
