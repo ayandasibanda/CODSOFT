@@ -39,7 +39,23 @@ class RandomNumber {
     System.out.println("Please enter random a number: ");
     }
 
-{
+// Implement counter variable to keep track of the number of attempts
+public class CounterVariable {
+        public static void main (String [] args) {
+            int counter = 0;
+
+            // Use for loop to increment counter variable
+            for(int i=0; i<5; i++){
+
+                // Increment counter variable
+                counter = counter + 1;
+
+                // Print out the incremented counter variable value
+                System.out.println(counter);
+            }
+        }
+
+
 
     }
 }
