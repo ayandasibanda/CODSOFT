@@ -3,60 +3,59 @@ import java.util.Scanner; // Import scanner class
 
 class RandomNumber {
     public static void main (String args[]) {
-    // Instantiation of random class
-    Random rand = new Random();
+        Scanner myObj = new Scanner(System.in);
 
-    // Setting the upper bound to generate the random numbers in the specific range
-    int upperbound = 100;
+        // Set the upper bound to generate random numbers in the specified range
+        int upperbound = 100;
+        int maxAttempts = 5;  // Set the maximum number of attempts
+        int maxRounds = 5;  // Set the maximum number of rounds
 
-    // Generate random values from 1 - 100 using nextInt()]
-    int randomNumber = rand.nextInt(upperbound) + 1;
+        int round = 1;  // Initialize the round counter
+        int score = 0;  // Initialize the score counter
 
-    // Collect user input
-    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-    int guessedNumber; // Variable declaration to store the user's guessed number
+        do {
+            // Generate a new random number for each round
+            Random rand = new Random();
+            int randomNumber = rand.nextInt(upperbound) + 1;
 
-    // Using a loop to compare the user's guess with the generated number
-    // and provide feedback on the users input
-    do {
-        System.out.print("Please enter your guessed number: ");
+            int attempts = 0;  // Initialize attempts counter for each round
 
-        // Read user input
-        guessedNumber = myObj.nextInt();
+            // Loop for attempts
+            for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+                System.out.print("Round " + round + ", Attempt " + attempt + ": Please enter your guessed number: ");
+                int guessedNumber = myObj.nextInt();
 
-        // Provide feedback on the user's guessed number
-        if (guessedNumber == randomNumber) {
-            System.out.println("Congratulations! You guessed the correct number!");
-        }  else if (guessedNumber < randomNumber) {
-            System.out.println("The number you guessed is too low, please try again.");
-        }   else {
-            System.out.println("The number you guessed is too high, please try again.");
-        }
-    }   while (guessedNumber != randomNumber);
+                if (guessedNumber == randomNumber) {
+                    System.out.println("Congratulations! You guessed the correct number!");
+                    score += maxAttempts - attempts;  // Update the score
+                    break;  // Exit the loop if the guess is correct
+                } else if (guessedNumber < randomNumber) {
+                    System.out.println("The number you guessed is too low, please try again.");
+                } else {
+                    System.out.println("The number you guessed is too high, please try again.");
+                }
 
-    // Close the scanner to prevent resource leaks
-        myObj.close();
-    System.out.println("Please enter random a number: ");
-    }
-
-// Implement counter variable to keep track of the number of attempts
-public class CounterVariable {
-        public static void main (String [] args) {
-            int counter = 0;
-
-            // Use for loop to increment counter variable
-            for(int i=0; i<5; i++){
-
-                // Increment counter variable
-                counter = counter + 1;
-
-                // Print out the incremented counter variable value
-                System.out.println(counter);
+                attempts++;  // Increment the attempts counter
             }
-        }
 
+            // Ask the user if they want to play again
+            System.out.print("Do you want to play again? (yes/no): ");
+            String playAgain = myObj.next();
 
+            if (!playAgain.equalsIgnoreCase("yes")) {
+                // If the user does not want to play again, exit the outer loop
+                break;
+            }
 
+            // Increment the round counter
+            round++;
+
+        } while (round <= maxRounds);
+
+        // Display the final score
+        System.out.println("Your final score: " + score);
+
+        // Close the scanner to prevent resource leaks
+        myObj.close();
     }
 }
-
