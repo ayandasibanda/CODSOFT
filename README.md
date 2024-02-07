@@ -15,8 +15,8 @@ Display the users score which can be based on the number of attempts taken or ro
 
 [**Task 2: Student Grade Calculator**](https://github.com/ayandasibanda/CODSOFT/blob/main/Task2.java)
 
-The input will be the marks obtained by the students out of 100 in each subject
-It will calculate the total mark by summing up the marks obtained in all subjects
+The input will be the marks obtained by the students out of 100 in each subject.
+It will calculate the total mark by summing up the marks obtained in all 7 subjects.
 It will calculate the average percentage by dividing the total marks by the total number of
 subjects to get the average percentage
 It will calculate the grade by assigning grades based on the average percentage achieved then
