@@ -53,7 +53,7 @@ class RandomNumber {
         } while (round <= maxRounds);
 
         // Display the final score
-        System.out.println("Your final score: " + score);
+        System.out.println("Your final score is: " + score);
 
         // Close the scanner to prevent resource leaks
         myObj.close();
