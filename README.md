@@ -32,7 +32,7 @@ I created a class to represent the user's bank account which stores the account 
 I connected the ATM class with the user's bank account class to access and modify the account balance.
 I validated the user input to ensure it is within acceptable limits and enabled it to display
 appropriate messages to the user based on their chosen options and the success or failure of their 
-transactions
+transactions.
 
 [**Task 4: Currency Converter**](https://github.com/ayandasibanda/CODSOFT/blob/main/Task4.java)
 
